@@ -14,6 +14,7 @@ st.set_page_config(
 
 apply_theme()
 render_sidebar()
+render_logo()
 
 if not dataset_exists():
     st.error(
