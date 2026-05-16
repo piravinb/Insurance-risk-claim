@@ -6,6 +6,7 @@ from pathlib import Path
 import streamlit as st
 
 APP_DIR = Path(__file__).resolve().parent.parent
+LOGO_PATH = APP_DIR / "assets" / "godigit_logo.png"
 
 # Digit Insurance palette
 YELLOW = "#FFC107"
@@ -365,10 +366,14 @@ def spacer(size: str = "md"):
     heights = {"sm": "0.75rem", "md": "1.25rem", "lg": "2rem"}
     st.markdown(f'<div style="height:{heights.get(size, "1.25rem")}"></div>', unsafe_allow_html=True)
 
+def render_logo():
+    """Go Digit branding above sidebar navigation."""
+    if LOGO_PATH.exists():
+        st.logo(str(LOGO_PATH), size="large")
+
 
 def render_sidebar():
     with st.sidebar:
-        st.markdown("### Insurance Analytics")
         st.caption("Claim Risk & Customer Analysis")
         st.markdown("---")
         if st.button("Rebuild ML models", use_container_width=True, type="primary"):
