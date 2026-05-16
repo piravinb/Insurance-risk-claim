@@ -2,7 +2,7 @@
 
 import streamlit as st
 
-from utils.app_style import apply_theme, render_sidebar
+from utils.app_style import apply_theme, render_logo, render_sidebar
 from utils.data_loader import CSV_PATH, dataset_exists
 
 st.set_page_config(
