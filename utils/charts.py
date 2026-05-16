@@ -77,7 +77,7 @@ def correlation_heatmap(df: pd.DataFrame, title: str = "Correlation Heatmap"):
         color_continuous_scale=[[0, "#FFFFFF"], [0.5, "#FFF8E1"], [1, "#FFC107"]],
         zmin=-1, zmax=1,
     )
-    return _apply_layout(fig, title, x_col=x, y_col=y)
+    return _apply_layout(fig, title)
 
 
 def scatter(df: pd.DataFrame, x: str, y: str, title: str, color: str | None = None):
